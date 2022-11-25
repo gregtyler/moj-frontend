@@ -19,6 +19,7 @@
     <!--[if gt IE 8]><!--><link href="/assets/stylesheets/application.css" rel="stylesheet"><!--<![endif]-->
     <title>Filter - MOJ Pattern Library</title>
 
+    <script type="text/javascript" src="https://www.googletagmanager.com/gtag/js?id=G-VTGX4YLSVL" async></script>
     <script type="text/javascript" src="/assets/javascript/jquery.js"></script>
     <script type="text/javascript" src="/assets/javascript/all.js"></script>
   </head>
@@ -27,7 +28,56 @@
 
     
       <div>
-        <header class="moj-header moj-header--docs" role="banner">
+        
+
+
+
+
+
+<div class="govuk-cookie-banner " data-nosnippet role="region" aria-label="Cookies on MoJ Pattern Library" data-module="app-cookies">
+    
+    
+
+    <div class="govuk-cookie-banner__message govuk-width-container"
+    >
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        
+        <h2 class="govuk-cookie-banner__heading govuk-heading-m">Cookies on MoJ Pattern Library</h2>
+        
+
+        <div class="govuk-cookie-banner__content">
+  <p class="govuk-body">We’d like to use analytics cookies so we can understand how you use the service and make improvements.</p>
+</div>
+      </div>
+    </div>
+
+      
+      <div class="govuk-button-group">
+        
+          
+            <button type="button" name="accept" class="govuk-button" data-module="govuk-button">
+              Accept analytics cookies
+            </button>
+          
+        
+          
+            <button type="button" name="reject" class="govuk-button" data-module="govuk-button">
+              Reject analytics cookies
+            </button>
+          
+        
+      </div>
+      
+    </div>
+  
+</div>
+
+
+<a href="#main-content" class="govuk-skip-link" data-module="govuk-skip-link">Skip to main content</a>
+
+<header class="moj-header moj-header--docs" role="banner">
 
   <div class="moj-header__container">
 
@@ -39,10 +89,11 @@
         <image src="/assets/images/moj-logotype-crest.png" xlink:href="" class="moj-header__logotype-crest-fallback-image" width="40" height="40"></image>
 
       </svg>
+      <a class="moj-header__link" href="/">
+        <span class="moj-header__link--organisation-name">Ministry of Justice</span>
 
-      <a class="moj-header__link moj-header__link--organisation-name" href="/">Ministry of Justice</a>
-
-      <a class="moj-header__link moj-header__link--service-name" href="/">Pattern Library</a>
+        <span class="moj-header__link--service-name">Pattern Library</span>
+      </a>
     </div>
   </div>
 
@@ -82,7 +133,7 @@
 
 
         
-  <div class="govuk-width-container govuk-grid-row">
+  <div class="govuk-width-container govuk-grid-row app-flex-container">
     <div class="govuk-grid-column-one-third">
       
   
@@ -95,19 +146,11 @@
           </li>
         
           <li class="moj-side-navigation__item">
-            <a href="/components/form-validator">Form validator</a>
-          </li>
-        
-          <li class="moj-side-navigation__item">
             <a href="/components/multi-file-upload">Multi file upload</a>
           </li>
         
           <li class="moj-side-navigation__item">
             <a href="/components/password-reveal">Password reveal</a>
-          </li>
-        
-          <li class="moj-side-navigation__item">
-            <a href="/components/rich-text-editor">Rich text editor</a>
           </li>
         </ul>
     
@@ -177,15 +220,23 @@
           </li>
         
           <li class="moj-side-navigation__item">
-            <a href="/components/timeline">Timeline</a>
-          </li>
-        
-          <li class="moj-side-navigation__item">
             <a href="/components/multi-select">Multi select</a>
           </li>
         
           <li class="moj-side-navigation__item">
+            <a href="/components/scrollable-pane">Scrollable pane</a>
+          </li>
+        
+          <li class="moj-side-navigation__item">
             <a href="/components/sortable-table">Sortable table</a>
+          </li>
+        
+          <li class="moj-side-navigation__item">
+            <a href="/components/ticket-panel">Ticket panel</a>
+          </li>
+        
+          <li class="moj-side-navigation__item">
+            <a href="/components/timeline">Timeline</a>
           </li>
         </ul>
     </nav>
@@ -216,7 +267,7 @@
     </div>
 
     <div class="govuk-grid-column-two-thirds">
-      <main class="govuk-main-wrapper app-prose-scope" role="main">
+      <main id="main-content" class="govuk-main-wrapper app-prose-scope" role="main">
         <h1 class="govuk-heading-xl">
           <span class="govuk-caption-xl">Components</span>
           Filter
@@ -240,7 +291,7 @@ A similar component exists
   <span class="app-example__new-window">
     <a href="/examples/filter" target="_blank">Open this example <span class="govuk-visually-hidden">(Filter (example))</span> in a new window</a>
   </span>
-  <iframe class="app-example__frame" scrolling="auto" frameborder="0" height="1000" src="/examples/filter" aria-label="Filter (example)"></iframe>
+  <iframe class="app-example__frame" scrolling="auto" frameborder="0" height="1000" src="/examples/filter" title="Filter (example)"></iframe>
 </div>
 <div class="app-tabs" data-module="app-tabs">
   <ul class="app-tabs__list" role="tablist">
@@ -310,6 +361,7 @@ A similar component exists
         <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
 
         <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-input&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;keywords&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;keywords&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span>&gt;</span>
+
       <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
       <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-form-group&quot;</span>&gt;</span>
@@ -406,12 +458,12 @@ A similar component exists
   </div>
   <div class="app-tabs__panel app-tabs__panel--hidden" id="nunjucks-default--examples-filter" role="tabpanel" aria-labelledby="tab_nunjucks-default--examples-filter">
   <div data-module="app-copy" style="position:relative;">
-<pre><code class="language-jinja"><span class="xml">
-</span><span class="hljs-template-tag">{%- <span class="hljs-name">from</span> &quot;moj/components/filter/macro.njk&quot; import mojFilter -%}</span><span class="xml">
-</span><span class="hljs-template-tag">{%- <span class="hljs-name">from</span> &quot;govuk/components/checkboxes/macro.njk&quot; import govukCheckboxes -%}</span><span class="xml">
-</span><span class="hljs-template-tag">{%- <span class="hljs-name">from</span> &quot;govuk/components/input/macro.njk&quot; import govukInput -%}</span><span class="xml">
+<pre><code class="language-jinja"><span class="language-xml">
+</span><span class="hljs-template-tag">{%- <span class="hljs-name">from</span> &quot;moj/components/filter/macro.njk&quot; import mojFilter -%}</span><span class="language-xml">
+</span><span class="hljs-template-tag">{%- <span class="hljs-name">from</span> &quot;govuk/components/checkboxes/macro.njk&quot; import govukCheckboxes -%}</span><span class="language-xml">
+</span><span class="hljs-template-tag">{%- <span class="hljs-name">from</span> &quot;govuk/components/input/macro.njk&quot; import govukInput -%}</span><span class="language-xml">
 
-</span><span class="hljs-template-tag">{%- <span class="hljs-name">set</span> filterOptionsHtml %}</span><span class="xml">
+</span><span class="hljs-template-tag">{%- <span class="hljs-name">set</span> filterOptionsHtml %}</span><span class="language-xml">
 
   </span><span class="hljs-template-variable">{{ govukInput({
     id: &#x27;keywords&#x27;,
@@ -420,7 +472,7 @@ A similar component exists
       text: &#x27;Keywords&#x27;,
       classes: &#x27;govuk-label--m&#x27;
     }
-  }) }}</span><span class="xml">
+  }) }}</span><span class="language-xml">
 
   </span><span class="hljs-template-variable">{{ govukCheckboxes({
     idPrefix: &#x27;type&#x27;,
@@ -448,7 +500,7 @@ A similar component exists
         text: &#x27;Red (2)&#x27;
       }
     ]
-  }) }}</span><span class="xml">
+  }) }}</span><span class="language-xml">
 
   </span><span class="hljs-template-variable">{{ govukCheckboxes({
     idPrefix: &#x27;status&#x27;,
@@ -476,8 +528,8 @@ A similar component exists
         checked: false
       }
     ]
-  }) }}</span><span class="xml">
-</span><span class="hljs-template-tag">{% <span class="hljs-name">endset</span> -%}</span><span class="xml">
+  }) }}</span><span class="language-xml">
+</span><span class="hljs-template-tag">{% <span class="hljs-name">endset</span> -%}</span><span class="language-xml">
 
 </span><span class="hljs-template-variable">{{ mojFilter({
   heading: {
@@ -518,23 +570,23 @@ A similar component exists
     ]
   },
   optionsHtml: filterOptionsHtml
-}) }}</span><span class="xml">
+}) }}</span><span class="language-xml">
 </span></code></pre>
   </div>
   </div>
 </div>
-<h2 id="when-to-use">When to use</h2>
+<h2 id="when-to-use" tabindex="-1">When to use</h2>
 <p>Use the filter component to help users filter a list of items, such as a list of cases or search results.</p>
 <p>You should only provide users with filters they really need.</p>
-<h2 id="how-to-use">How to use</h2>
+<h2 id="how-to-use" tabindex="-1">How to use</h2>
 <p>You should use this component with the <a href="../../patterns/filter-a-list">filter a list</a> pattern to allow the component to be shown with a list.</p>
 <p>Users can select 1 or more filters. When the user clicks 'Apply filters' the page refreshes to show the items that match the filters.</p>
 <p>The selected filters are displayed at the top to let users see what they've selected and remove them easily. Clicking on a selected filter refreshes the page and removes the filter.</p>
-<h3 id="types-of-filters">Types of filters</h3>
+<h3 id="types-of-filters" tabindex="-1">Types of filters</h3>
 <p>You can use form elements such as <a href="https://design-system.service.gov.uk/components/radios/">radios</a> and <a href="https://design-system.service.gov.uk/components/checkboxes/">checkboxes</a> to let users filter the list. Follow guidance on how to <a href="https://design-system.service.gov.uk/patterns/dates/">ask users for dates</a>.</p>
 <p>User research will tell you the best order of filters.</p>
-<h3 id="navigating-filters">Navigating filters</h3>
-<h4 id="show-and-hide-individual-filters">Show and hide individual filters</h4>
+<h3 id="navigating-filters" tabindex="-1">Navigating filters</h3>
+<h4 id="show-and-hide-individual-filters" tabindex="-1">Show and hide individual filters</h4>
 <p>If you're providing multiple ways of filtering, you may want to let users show and hide filters as needed.</p>
 <div class="govuk-form-group">
 <table>
@@ -559,7 +611,7 @@ A similar component exists
 <li>inform the user where they are and when content changes</li>
 </ul>
 <p>If you struggle to come up with clear labels, it might be because the way you’ve separated the content is not clear.</p>
-<h4 id="reducing-the-list-of-filter-options">Reducing the list of filter options</h4>
+<h4 id="reducing-the-list-of-filter-options" tabindex="-1">Reducing the list of filter options</h4>
 <p>If a filter has a long list of options, use an <a href="https://github.com/alphagov/accessible-autocomplete">accessible autocomplete</a> (type ahead) to let users narrow down the options before making a selection.</p>
 <p>You should only show options if they match what the user has typed, of if they are already selected.</p>
 <p>You should make it easier for users to narrow the options by:</p>
@@ -580,16 +632,16 @@ A similar component exists
     </tr>
 </table>
 </div>
-<h2 id="research">Research</h2>
+<h2 id="research" tabindex="-1">Research</h2>
 <p>This component:</p>
 <ul>
 <li>has been usability tested</li>
 <li>is working in a live service (Sirius for Office of the Public Guardian)</li>
 </ul>
 <p>Users don't always see they can filter. Some users try to filter from the columns headings.</p>
-<h2 id="contribute">Contribute</h2>
+<h2 id="contribute" tabindex="-1">Contribute</h2>
 <p><a href="https://github.com/ministryofjustice/moj-frontend/discussions/197">Discuss filters on GitHub</a></p>
-<h3 id="things-we-don't-know-enough-about">Things we don't know enough about</h3>
+<h3 id="things-we-don't-know-enough-about" tabindex="-1">Things we don't know enough about</h3>
 <ul>
 <li>
 <p>Guidance on when to use an alternative to search, such as 'search' or 'sort by'</p>
@@ -621,68 +673,118 @@ A similar component exists
 
       
 <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
-<h2 class="govuk-heading-m">Need help?</h2>
+<h2 class="govuk-heading-l">Need help?</h2>
 <p class="govuk-body">You can edit the page via <a href="https://github.com/ministryofjustice/moj-frontend/tree/main/docs" class="govuk-link">GitHub</a>
  or if you’ve got a question, idea or suggestion share it on the <a href="https://mojdt.slack.com/archives/CH5RUSB27" class="govuk-link">#moj-pattern-library-support</a> channel on Slack.</p>
 
- <div class="govuk-!-padding-bottom-7"></div>
+<div class="govuk-!-padding-bottom-7"></div>
 
     </div>
   </div>
 
 
-        <footer class="govuk-footer" role="contentinfo">
+        
 
-  <div class="govuk-width-container">
-
-    <div class="govuk-footer__navigation">
-
-      <div class="govuk-footer__section">
-
-        <h2 class="govuk-footer__heading govuk-heading-m">Related resources</h2>
-
-        <ul class="govuk-footer__list govuk-footer__list--columns-1">
-          <li class="govuk-footer__list-item"><a class="govuk-footer__link" href="https://www.gov.uk/guidance/government-design-principles">Government Design Principles</a></li>
-          <li class="govuk-footer__list-item"><a class="govuk-footer__link" href="https://design-system.service.gov.uk/">GOV.UK Design System</a></li>
-          <li class="govuk-footer__list-item"><a class="govuk-footer__link" href="https://www.gov.uk/service-manual">GOV.UK Service Manual</a></li>
-        </ul>
-
+<footer class="govuk-footer " role="contentinfo">
+  <div class="govuk-width-container ">
+    
+      <div class="govuk-footer__navigation">
+        
+          <div class="govuk-footer__section govuk-grid-column-full">
+            <h2 class="govuk-footer__heading govuk-heading-m">Related resources</h2>
+            
+              
+              <ul class="govuk-footer__list ">
+                
+                  
+                    <li class="govuk-footer__list-item">
+                      <a class="govuk-footer__link" href="https://www.gov.uk/guidance/government-design-principles">
+                        Government Design Principles
+                      </a>
+                    </li>
+                  
+                
+                  
+                    <li class="govuk-footer__list-item">
+                      <a class="govuk-footer__link" href="https://design-system.service.gov.uk/">
+                        GOV.UK Design System
+                      </a>
+                    </li>
+                  
+                
+                  
+                    <li class="govuk-footer__list-item">
+                      <a class="govuk-footer__link" href="https://www.gov.uk/service-manual">
+                        GOV.UK Service Manual
+                      </a>
+                    </li>
+                  
+                
+              </ul>
+            
+          </div>
+        
       </div>
-
-    </div>
-
-    <hr class="govuk-section-break">
-
+      <hr class="govuk-footer__section-break">
+    
     <div class="govuk-footer__meta">
-
       <div class="govuk-footer__meta-item govuk-footer__meta-item--grow">
-
-        <h2 class="govuk-visually-hidden">Support links</h2>
-
-        <ul class="govuk-footer__inline-list">
-          <li class="govuk-footer__inline-list-item"><a class="govuk-footer__link" href="/cookies">Cookies</a></li>
-          <li class="govuk-footer__inline-list-item"><a class="govuk-footer__link" href="/privacy-policy">Privacy policy</a></li>
-        </ul>
-
-        <svg aria-hidden="true" focusable="false" class="govuk-footer__licence-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 483.2 195.7" height="17" width="41">
-          <path fill="currentColor" d="M421.5 142.8V.1l-50.7 32.3v161.1h112.4v-50.7zm-122.3-9.6A47.12 47.12 0 0 1 221 97.8c0-26 21.1-47.1 47.1-47.1 16.7 0 31.4 8.7 39.7 21.8l42.7-27.2A97.63 97.63 0 0 0 268.1 0c-36.5 0-68.3 20.1-85.1 49.7A98 98 0 0 0 97.8 0C43.9 0 0 43.9 0 97.8s43.9 97.8 97.8 97.8c36.5 0 68.3-20.1 85.1-49.7a97.76 97.76 0 0 0 149.6 25.4l19.4 22.2h3v-87.8h-80l24.3 27.5zM97.8 145c-26 0-47.1-21.1-47.1-47.1s21.1-47.1 47.1-47.1 47.2 21 47.2 47S123.8 145 97.8 145"></path>
+        
+          <h2 class="govuk-visually-hidden">Support links</h2>
+          
+            <ul class="govuk-footer__inline-list">
+              
+                <li class="govuk-footer__inline-list-item">
+                  <a class="govuk-footer__link" href="/cookies">
+                    Cookies
+                  </a>
+                </li>
+              
+                <li class="govuk-footer__inline-list-item">
+                  <a class="govuk-footer__link" href="/accessibility">
+                    Accessibility
+                  </a>
+                </li>
+              
+            </ul>
+          
+          
+        
+        <svg
+          aria-hidden="true"
+          focusable="false"
+          class="govuk-footer__licence-logo"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 483.2 195.7"
+          height="17"
+          width="41"
+        >
+          <path
+            fill="currentColor"
+            d="M421.5 142.8V.1l-50.7 32.3v161.1h112.4v-50.7zm-122.3-9.6A47.12 47.12 0 0 1 221 97.8c0-26 21.1-47.1 47.1-47.1 16.7 0 31.4 8.7 39.7 21.8l42.7-27.2A97.63 97.63 0 0 0 268.1 0c-36.5 0-68.3 20.1-85.1 49.7A98 98 0 0 0 97.8 0C43.9 0 0 43.9 0 97.8s43.9 97.8 97.8 97.8c36.5 0 68.3-20.1 85.1-49.7a97.76 97.76 0 0 0 149.6 25.4l19.4 22.2h3v-87.8h-80l24.3 27.5zM97.8 145c-26 0-47.1-21.1-47.1-47.1s21.1-47.1 47.1-47.1 47.2 21 47.2 47S123.8 145 97.8 145"
+          />
         </svg>
-
-        <span class="govuk-footer__licence-description">All content is available under the
-          <a class="govuk-footer__link" href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="license">Open Government Licence v3.0</a>, except where otherwise stated
+        <span class="govuk-footer__licence-description">
+          
+            All content is available under the
+            <a
+              class="govuk-footer__link"
+              href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+              rel="license"
+            >Open Government Licence v3.0</a>, except where otherwise stated
+          
         </span>
-
       </div>
-
       <div class="govuk-footer__meta-item">
-        <a class="govuk-footer__link govuk-footer__copyright-logo" href="http://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/copyright-and-re-use/crown-copyright/">&copy; Crown copyright</a>
+        <a
+          class="govuk-footer__link govuk-footer__copyright-logo"
+          href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/"
+        >© Crown copyright</a>
       </div>
-
     </div>
-
   </div>
-
 </footer>
+
 
 
       </div>

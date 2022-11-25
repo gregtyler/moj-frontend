@@ -19,6 +19,7 @@
     <!--[if gt IE 8]><!--><link href="/assets/stylesheets/application.css" rel="stylesheet"><!--<![endif]-->
     <title>Setting up JavaScript - MOJ Pattern Library</title>
 
+    <script type="text/javascript" src="https://www.googletagmanager.com/gtag/js?id=G-VTGX4YLSVL" async></script>
     <script type="text/javascript" src="/assets/javascript/jquery.js"></script>
     <script type="text/javascript" src="/assets/javascript/all.js"></script>
   </head>
@@ -27,7 +28,56 @@
 
     
       <div>
-        <header class="moj-header moj-header--docs" role="banner">
+        
+
+
+
+
+
+<div class="govuk-cookie-banner " data-nosnippet role="region" aria-label="Cookies on MoJ Pattern Library" data-module="app-cookies">
+    
+    
+
+    <div class="govuk-cookie-banner__message govuk-width-container"
+    >
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        
+        <h2 class="govuk-cookie-banner__heading govuk-heading-m">Cookies on MoJ Pattern Library</h2>
+        
+
+        <div class="govuk-cookie-banner__content">
+  <p class="govuk-body">We’d like to use analytics cookies so we can understand how you use the service and make improvements.</p>
+</div>
+      </div>
+    </div>
+
+      
+      <div class="govuk-button-group">
+        
+          
+            <button type="button" name="accept" class="govuk-button" data-module="govuk-button">
+              Accept analytics cookies
+            </button>
+          
+        
+          
+            <button type="button" name="reject" class="govuk-button" data-module="govuk-button">
+              Reject analytics cookies
+            </button>
+          
+        
+      </div>
+      
+    </div>
+  
+</div>
+
+
+<a href="#main-content" class="govuk-skip-link" data-module="govuk-skip-link">Skip to main content</a>
+
+<header class="moj-header moj-header--docs" role="banner">
 
   <div class="moj-header__container">
 
@@ -39,10 +89,11 @@
         <image src="/assets/images/moj-logotype-crest.png" xlink:href="" class="moj-header__logotype-crest-fallback-image" width="40" height="40"></image>
 
       </svg>
+      <a class="moj-header__link" href="/">
+        <span class="moj-header__link--organisation-name">Ministry of Justice</span>
 
-      <a class="moj-header__link moj-header__link--organisation-name" href="/">Ministry of Justice</a>
-
-      <a class="moj-header__link moj-header__link--service-name" href="/">Pattern Library</a>
+        <span class="moj-header__link--service-name">Pattern Library</span>
+      </a>
     </div>
   </div>
 
@@ -82,7 +133,7 @@
 
 
         
-  <div class="govuk-width-container govuk-grid-row">
+  <div class="govuk-width-container govuk-grid-row app-flex-container">
     <div class="govuk-grid-column-one-third">
       
   
@@ -127,7 +178,7 @@
     </div>
 
     <div class="govuk-grid-column-two-thirds">
-      <main class="govuk-main-wrapper app-prose-scope" role="main">
+      <main id="main-content" class="govuk-main-wrapper app-prose-scope" role="main">
         <h1 class="govuk-heading-xl">
           <span class="govuk-caption-xl">How to guides</span>
           Setting up JavaScript
@@ -138,7 +189,7 @@
 <li>include the MOJ Pattern Library's JavaScript code directly in your HTML templates</li>
 <li>import the JavaScript using a bundler like Webpack</li>
 </ul>
-<h2 id="add-the-javascript-file-to-your-html">Add the JavaScript file to your HTML</h2>
+<h2 id="add-the-javascript-file-to-your-html" tabindex="-1">Add the JavaScript file to your HTML</h2>
 <p>To include the code directly in a template, first either:</p>
 <ul>
 <li>set up your routing so that requests for the JavaScript file are served from <code>node_modules/@ministryofjustice/frontend/moj/all.js</code></li>
@@ -150,27 +201,27 @@
 ...
   <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;&lt;YOUR-APP&gt;/jquery.js&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;&lt;YOUR-APP&gt;/&lt;YOUR-JS-FILE&gt;.js&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
-    <span class="hljs-built_in">window</span>.MOJFrontend.initAll()
+  <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="language-javascript">
+    <span class="hljs-variable language_">window</span>.<span class="hljs-property">MOJFrontend</span>.<span class="hljs-title function_">initAll</span>()
   </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
 </code></pre>
 <p><strong>Some components cannot be initialised by this method</strong> and this is noted on their individual documentation pages. For more details, <a href="#initialize-individual-components">see below</a>.</p>
-<h2 id="import-using-a-bundler">Import using a bundler</h2>
+<h2 id="import-using-a-bundler" tabindex="-1">Import using a bundler</h2>
 <p>If you decide to import using a bundler, use <code>import</code> to import jQuery and all of the design systems’s components, then run the <code>initAll</code> function to initialise them:</p>
 <pre><code class="language-javascript"><span class="hljs-keyword">import</span> $ <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;jquery&#x27;</span>
 <span class="hljs-keyword">import</span> { initAll } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@ministryofjustice/frontend&#x27;</span>
 
-<span class="hljs-built_in">window</span>.$ = $
-initAll()
+<span class="hljs-variable language_">window</span>.<span class="hljs-property">$</span> = $
+<span class="hljs-title function_">initAll</span>()
 </code></pre>
-<h2 id="initialize-individual-components">Initialize individual components</h2>
+<h2 id="initialize-individual-components" tabindex="-1">Initialize individual components</h2>
 <p>Rather than using <code>initAll</code>, you can initialise individual components by identifying them with their <code>data-module</code> attribute. For example, to initialise just the <a href="../../components/password-reveal">Password reveal</a> component:</p>
-<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
-<span class="hljs-keyword">var</span> PasswordReveal = <span class="hljs-built_in">window</span>.MOJFrontend.PasswordReveal
-<span class="hljs-keyword">var</span> $passwordReveal = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">&#x27;[data-module=&quot;moj-password-reveal&quot;]&#x27;</span>)
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="language-javascript">
+<span class="hljs-keyword">var</span> <span class="hljs-title class_">PasswordReveal</span> = <span class="hljs-variable language_">window</span>.<span class="hljs-property">MOJFrontend</span>.<span class="hljs-property">PasswordReveal</span>
+<span class="hljs-keyword">var</span> $passwordReveal = <span class="hljs-variable language_">document</span>.<span class="hljs-title function_">querySelector</span>(<span class="hljs-string">&#x27;[data-module=&quot;moj-password-reveal&quot;]&#x27;</span>)
 <span class="hljs-keyword">if</span> ($passwordReveal) {
-    <span class="hljs-keyword">new</span> PasswordReveal($passwordReveal)
+    <span class="hljs-keyword">new</span> <span class="hljs-title class_">PasswordReveal</span>($passwordReveal)
 }
 </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
 </code></pre>
@@ -186,68 +237,118 @@ initAll()
 
       
 <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
-<h2 class="govuk-heading-m">Need help?</h2>
+<h2 class="govuk-heading-l">Need help?</h2>
 <p class="govuk-body">You can edit the page via <a href="https://github.com/ministryofjustice/moj-frontend/tree/main/docs" class="govuk-link">GitHub</a>
  or if you’ve got a question, idea or suggestion share it on the <a href="https://mojdt.slack.com/archives/CH5RUSB27" class="govuk-link">#moj-pattern-library-support</a> channel on Slack.</p>
 
- <div class="govuk-!-padding-bottom-7"></div>
+<div class="govuk-!-padding-bottom-7"></div>
 
     </div>
   </div>
 
 
-        <footer class="govuk-footer" role="contentinfo">
+        
 
-  <div class="govuk-width-container">
-
-    <div class="govuk-footer__navigation">
-
-      <div class="govuk-footer__section">
-
-        <h2 class="govuk-footer__heading govuk-heading-m">Related resources</h2>
-
-        <ul class="govuk-footer__list govuk-footer__list--columns-1">
-          <li class="govuk-footer__list-item"><a class="govuk-footer__link" href="https://www.gov.uk/guidance/government-design-principles">Government Design Principles</a></li>
-          <li class="govuk-footer__list-item"><a class="govuk-footer__link" href="https://design-system.service.gov.uk/">GOV.UK Design System</a></li>
-          <li class="govuk-footer__list-item"><a class="govuk-footer__link" href="https://www.gov.uk/service-manual">GOV.UK Service Manual</a></li>
-        </ul>
-
+<footer class="govuk-footer " role="contentinfo">
+  <div class="govuk-width-container ">
+    
+      <div class="govuk-footer__navigation">
+        
+          <div class="govuk-footer__section govuk-grid-column-full">
+            <h2 class="govuk-footer__heading govuk-heading-m">Related resources</h2>
+            
+              
+              <ul class="govuk-footer__list ">
+                
+                  
+                    <li class="govuk-footer__list-item">
+                      <a class="govuk-footer__link" href="https://www.gov.uk/guidance/government-design-principles">
+                        Government Design Principles
+                      </a>
+                    </li>
+                  
+                
+                  
+                    <li class="govuk-footer__list-item">
+                      <a class="govuk-footer__link" href="https://design-system.service.gov.uk/">
+                        GOV.UK Design System
+                      </a>
+                    </li>
+                  
+                
+                  
+                    <li class="govuk-footer__list-item">
+                      <a class="govuk-footer__link" href="https://www.gov.uk/service-manual">
+                        GOV.UK Service Manual
+                      </a>
+                    </li>
+                  
+                
+              </ul>
+            
+          </div>
+        
       </div>
-
-    </div>
-
-    <hr class="govuk-section-break">
-
+      <hr class="govuk-footer__section-break">
+    
     <div class="govuk-footer__meta">
-
       <div class="govuk-footer__meta-item govuk-footer__meta-item--grow">
-
-        <h2 class="govuk-visually-hidden">Support links</h2>
-
-        <ul class="govuk-footer__inline-list">
-          <li class="govuk-footer__inline-list-item"><a class="govuk-footer__link" href="/cookies">Cookies</a></li>
-          <li class="govuk-footer__inline-list-item"><a class="govuk-footer__link" href="/privacy-policy">Privacy policy</a></li>
-        </ul>
-
-        <svg aria-hidden="true" focusable="false" class="govuk-footer__licence-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 483.2 195.7" height="17" width="41">
-          <path fill="currentColor" d="M421.5 142.8V.1l-50.7 32.3v161.1h112.4v-50.7zm-122.3-9.6A47.12 47.12 0 0 1 221 97.8c0-26 21.1-47.1 47.1-47.1 16.7 0 31.4 8.7 39.7 21.8l42.7-27.2A97.63 97.63 0 0 0 268.1 0c-36.5 0-68.3 20.1-85.1 49.7A98 98 0 0 0 97.8 0C43.9 0 0 43.9 0 97.8s43.9 97.8 97.8 97.8c36.5 0 68.3-20.1 85.1-49.7a97.76 97.76 0 0 0 149.6 25.4l19.4 22.2h3v-87.8h-80l24.3 27.5zM97.8 145c-26 0-47.1-21.1-47.1-47.1s21.1-47.1 47.1-47.1 47.2 21 47.2 47S123.8 145 97.8 145"></path>
+        
+          <h2 class="govuk-visually-hidden">Support links</h2>
+          
+            <ul class="govuk-footer__inline-list">
+              
+                <li class="govuk-footer__inline-list-item">
+                  <a class="govuk-footer__link" href="/cookies">
+                    Cookies
+                  </a>
+                </li>
+              
+                <li class="govuk-footer__inline-list-item">
+                  <a class="govuk-footer__link" href="/accessibility">
+                    Accessibility
+                  </a>
+                </li>
+              
+            </ul>
+          
+          
+        
+        <svg
+          aria-hidden="true"
+          focusable="false"
+          class="govuk-footer__licence-logo"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 483.2 195.7"
+          height="17"
+          width="41"
+        >
+          <path
+            fill="currentColor"
+            d="M421.5 142.8V.1l-50.7 32.3v161.1h112.4v-50.7zm-122.3-9.6A47.12 47.12 0 0 1 221 97.8c0-26 21.1-47.1 47.1-47.1 16.7 0 31.4 8.7 39.7 21.8l42.7-27.2A97.63 97.63 0 0 0 268.1 0c-36.5 0-68.3 20.1-85.1 49.7A98 98 0 0 0 97.8 0C43.9 0 0 43.9 0 97.8s43.9 97.8 97.8 97.8c36.5 0 68.3-20.1 85.1-49.7a97.76 97.76 0 0 0 149.6 25.4l19.4 22.2h3v-87.8h-80l24.3 27.5zM97.8 145c-26 0-47.1-21.1-47.1-47.1s21.1-47.1 47.1-47.1 47.2 21 47.2 47S123.8 145 97.8 145"
+          />
         </svg>
-
-        <span class="govuk-footer__licence-description">All content is available under the
-          <a class="govuk-footer__link" href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="license">Open Government Licence v3.0</a>, except where otherwise stated
+        <span class="govuk-footer__licence-description">
+          
+            All content is available under the
+            <a
+              class="govuk-footer__link"
+              href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+              rel="license"
+            >Open Government Licence v3.0</a>, except where otherwise stated
+          
         </span>
-
       </div>
-
       <div class="govuk-footer__meta-item">
-        <a class="govuk-footer__link govuk-footer__copyright-logo" href="http://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/copyright-and-re-use/crown-copyright/">&copy; Crown copyright</a>
+        <a
+          class="govuk-footer__link govuk-footer__copyright-logo"
+          href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/"
+        >© Crown copyright</a>
       </div>
-
     </div>
-
   </div>
-
 </footer>
+
 
 
       </div>

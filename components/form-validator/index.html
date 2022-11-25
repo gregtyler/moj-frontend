@@ -19,6 +19,7 @@
     <!--[if gt IE 8]><!--><link href="/assets/stylesheets/application.css" rel="stylesheet"><!--<![endif]-->
     <title>Form validator - MOJ Pattern Library</title>
 
+    <script type="text/javascript" src="https://www.googletagmanager.com/gtag/js?id=G-VTGX4YLSVL" async></script>
     <script type="text/javascript" src="/assets/javascript/jquery.js"></script>
     <script type="text/javascript" src="/assets/javascript/all.js"></script>
   </head>
@@ -27,7 +28,56 @@
 
     
       <div>
-        <header class="moj-header moj-header--docs" role="banner">
+        
+
+
+
+
+
+<div class="govuk-cookie-banner " data-nosnippet role="region" aria-label="Cookies on MoJ Pattern Library" data-module="app-cookies">
+    
+    
+
+    <div class="govuk-cookie-banner__message govuk-width-container"
+    >
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        
+        <h2 class="govuk-cookie-banner__heading govuk-heading-m">Cookies on MoJ Pattern Library</h2>
+        
+
+        <div class="govuk-cookie-banner__content">
+  <p class="govuk-body">We’d like to use analytics cookies so we can understand how you use the service and make improvements.</p>
+</div>
+      </div>
+    </div>
+
+      
+      <div class="govuk-button-group">
+        
+          
+            <button type="button" name="accept" class="govuk-button" data-module="govuk-button">
+              Accept analytics cookies
+            </button>
+          
+        
+          
+            <button type="button" name="reject" class="govuk-button" data-module="govuk-button">
+              Reject analytics cookies
+            </button>
+          
+        
+      </div>
+      
+    </div>
+  
+</div>
+
+
+<a href="#main-content" class="govuk-skip-link" data-module="govuk-skip-link">Skip to main content</a>
+
+<header class="moj-header moj-header--docs" role="banner">
 
   <div class="moj-header__container">
 
@@ -39,10 +89,11 @@
         <image src="/assets/images/moj-logotype-crest.png" xlink:href="" class="moj-header__logotype-crest-fallback-image" width="40" height="40"></image>
 
       </svg>
+      <a class="moj-header__link" href="/">
+        <span class="moj-header__link--organisation-name">Ministry of Justice</span>
 
-      <a class="moj-header__link moj-header__link--organisation-name" href="/">Ministry of Justice</a>
-
-      <a class="moj-header__link moj-header__link--service-name" href="/">Pattern Library</a>
+        <span class="moj-header__link--service-name">Pattern Library</span>
+      </a>
     </div>
   </div>
 
@@ -82,7 +133,7 @@
 
 
         
-  <div class="govuk-width-container govuk-grid-row">
+  <div class="govuk-width-container govuk-grid-row app-flex-container">
     <div class="govuk-grid-column-one-third">
       
   
@@ -94,20 +145,12 @@
             <a href="/components/add-another">Add another</a>
           </li>
         
-          <li class="moj-side-navigation__item moj-side-navigation__item--active">
-            <a href="/components/form-validator" aria-current="location">Form validator</a>
-          </li>
-        
           <li class="moj-side-navigation__item">
             <a href="/components/multi-file-upload">Multi file upload</a>
           </li>
         
           <li class="moj-side-navigation__item">
             <a href="/components/password-reveal">Password reveal</a>
-          </li>
-        
-          <li class="moj-side-navigation__item">
-            <a href="/components/rich-text-editor">Rich text editor</a>
           </li>
         </ul>
     
@@ -177,15 +220,23 @@
           </li>
         
           <li class="moj-side-navigation__item">
-            <a href="/components/timeline">Timeline</a>
-          </li>
-        
-          <li class="moj-side-navigation__item">
             <a href="/components/multi-select">Multi select</a>
           </li>
         
           <li class="moj-side-navigation__item">
+            <a href="/components/scrollable-pane">Scrollable pane</a>
+          </li>
+        
+          <li class="moj-side-navigation__item">
             <a href="/components/sortable-table">Sortable table</a>
+          </li>
+        
+          <li class="moj-side-navigation__item">
+            <a href="/components/ticket-panel">Ticket panel</a>
+          </li>
+        
+          <li class="moj-side-navigation__item">
+            <a href="/components/timeline">Timeline</a>
           </li>
         </ul>
     </nav>
@@ -216,17 +267,32 @@
     </div>
 
     <div class="govuk-grid-column-two-thirds">
-      <main class="govuk-main-wrapper app-prose-scope" role="main">
+      <main id="main-content" class="govuk-main-wrapper app-prose-scope" role="main">
         <h1 class="govuk-heading-xl">
           <span class="govuk-caption-xl">Components</span>
           Form validator
         </h1>
-        <p>Last updated: <a href="https://github.com/ministryofjustice/moj-frontend/commit/d409b2143dc444f4b3d5f270acdc427a76eb3f00">31 July 2019</a></p>
+        <p><div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+<div class="govuk-notification-banner__header">
+<h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+Important
+</h2>
+</div>
+<div class="govuk-notification-banner__content">
+<h3 class="govuk-notification-banner__heading">
+This component is archived
+</h3></p>
+<p>This component is not sufficiently accessible to be used in live services.</p>
+<p>You must validate forms on the server-side. If you require client-side validation, start with <a href="https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation#using_built-in_form_validation">native browser form validation</a>.
+For more complex validation, use an accessible validation library.</p>
+</div>
+      </div>
+<p>Last updated: <a href="https://github.com/ministryofjustice/moj-frontend/commit/bc848ffdd0813814b806f4e223430badea7186ea">11 October 2022</a></p>
 <div class="app-example">
   <span class="app-example__new-window">
     <a href="/examples/form-validator" target="_blank">Open this example <span class="govuk-visually-hidden">(Form validator (example))</span> in a new window</a>
   </span>
-  <iframe class="app-example__frame" scrolling="auto" frameborder="0" height="1000" src="/examples/form-validator" aria-label="Form validator (example)"></iframe>
+  <iframe class="app-example__frame" scrolling="auto" frameborder="0" height="1000" src="/examples/form-validator" title="Form validator (example)"></iframe>
 </div>
 <div class="app-tabs" data-module="app-tabs">
   <ul class="app-tabs__list" role="tablist">
@@ -249,6 +315,7 @@
     <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
 
     <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-input&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;email&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;email&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span>&gt;</span>
+
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-form-group&quot;</span>&gt;</span>
@@ -257,6 +324,7 @@
     <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
 
     <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-input&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;password&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;password&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;password&quot;</span>&gt;</span>
+
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-form-group&quot;</span>&gt;</span>
@@ -269,7 +337,7 @@
 
       <span class="hljs-tag">&lt;/<span class="hljs-name">legend</span>&gt;</span>
 
-      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-radios&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-radios&quot;</span> <span class="hljs-attr">data-module</span>=<span class="hljs-string">&quot;govuk-radios&quot;</span>&gt;</span>
 
         <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-radios__item&quot;</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-radios__input&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;location&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;location&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;radio&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;england&quot;</span>&gt;</span>
@@ -330,7 +398,8 @@
               Day
             <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
 
-            <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-input govuk-date-input__input govuk-input--width-2&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;dob-day&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;dob-day&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">pattern</span>=<span class="hljs-string">&quot;[0-9]*&quot;</span> <span class="hljs-attr">inputmode</span>=<span class="hljs-string">&quot;numeric&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-input govuk-date-input__input govuk-input--width-2&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;dob-day&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;dob-day&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">inputmode</span>=<span class="hljs-string">&quot;numeric&quot;</span>&gt;</span>
+
           <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
@@ -340,7 +409,8 @@
               Month
             <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
 
-            <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-input govuk-date-input__input govuk-input--width-2&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;dob-month&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;dob-month&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">pattern</span>=<span class="hljs-string">&quot;[0-9]*&quot;</span> <span class="hljs-attr">inputmode</span>=<span class="hljs-string">&quot;numeric&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-input govuk-date-input__input govuk-input--width-2&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;dob-month&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;dob-month&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">inputmode</span>=<span class="hljs-string">&quot;numeric&quot;</span>&gt;</span>
+
           <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
@@ -350,7 +420,8 @@
               Year
             <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
 
-            <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-input govuk-date-input__input govuk-input--width-4&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;dob-year&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;dob-year&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">pattern</span>=<span class="hljs-string">&quot;[0-9]*&quot;</span> <span class="hljs-attr">inputmode</span>=<span class="hljs-string">&quot;numeric&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-input govuk-date-input__input govuk-input--width-4&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;dob-year&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;dob-year&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">inputmode</span>=<span class="hljs-string">&quot;numeric&quot;</span>&gt;</span>
+
           <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
@@ -370,11 +441,11 @@
   </div>
   <div class="app-tabs__panel app-tabs__panel--hidden" id="nunjucks-default--examples-form-validator" role="tabpanel" aria-labelledby="tab_nunjucks-default--examples-form-validator">
   <div data-module="app-copy" style="position:relative;">
-<pre><code class="language-jinja"><span class="xml">
-</span><span class="hljs-template-tag">{%- <span class="hljs-name">from</span> &quot;govuk/components/input/macro.njk&quot; import govukInput -%}</span><span class="xml">
-</span><span class="hljs-template-tag">{%- <span class="hljs-name">from</span> &quot;govuk/components/radios/macro.njk&quot; import govukRadios -%}</span><span class="xml">
-</span><span class="hljs-template-tag">{%- <span class="hljs-name">from</span> &quot;govuk/components/date-input/macro.njk&quot; import govukDateInput -%}</span><span class="xml">
-</span><span class="hljs-template-tag">{%- <span class="hljs-name">from</span> &quot;govuk/components/button/macro.njk&quot; import govukButton -%}</span><span class="xml">
+<pre><code class="language-jinja"><span class="language-xml">
+</span><span class="hljs-template-tag">{%- <span class="hljs-name">from</span> &quot;govuk/components/input/macro.njk&quot; import govukInput -%}</span><span class="language-xml">
+</span><span class="hljs-template-tag">{%- <span class="hljs-name">from</span> &quot;govuk/components/radios/macro.njk&quot; import govukRadios -%}</span><span class="language-xml">
+</span><span class="hljs-template-tag">{%- <span class="hljs-name">from</span> &quot;govuk/components/date-input/macro.njk&quot; import govukDateInput -%}</span><span class="language-xml">
+</span><span class="hljs-template-tag">{%- <span class="hljs-name">from</span> &quot;govuk/components/button/macro.njk&quot; import govukButton -%}</span><span class="language-xml">
 
 <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">tabindex</span>=<span class="hljs-string">&quot;-1&quot;</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;group&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;errorSummary&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-error-summary moj-hidden&quot;</span> <span class="hljs-attr">aria-labelledby</span>=<span class="hljs-string">&quot;error-summary-title&quot;</span> <span class="hljs-attr">data-module</span>=<span class="hljs-string">&quot;error-summary&quot;</span>&gt;</span>
 
@@ -390,7 +461,7 @@
       text: &quot;Email&quot;,
       classes: &#x27;govuk-!-font-weight-bold&#x27;
     }
-  }) }}</span><span class="xml">
+  }) }}</span><span class="language-xml">
 
   </span><span class="hljs-template-variable">{{ govukInput({
     id: &quot;password&quot;,
@@ -400,7 +471,7 @@
       text: &quot;Password&quot;,
       classes: &#x27;govuk-!-font-weight-bold&#x27;
     }
-  }) }}</span><span class="xml">
+  }) }}</span><span class="language-xml">
 
   </span><span class="hljs-template-variable">{{ govukRadios({
     idPrefix: &quot;location&quot;,
@@ -430,7 +501,7 @@
         text: &quot;Northern Ireland&quot;
       }
     ]
-  }) }}</span><span class="xml">
+  }) }}</span><span class="language-xml">
 
   </span><span class="hljs-template-variable">{{ govukDateInput({
     id: &quot;dob&quot;,
@@ -444,78 +515,78 @@
     hint: {
       text: &quot;For example, 31 3 1980&quot;
     }
-  }) }}</span><span class="xml">
+  }) }}</span><span class="language-xml">
 
   </span><span class="hljs-template-variable">{{ govukButton({
     text: &quot;Save and continue&quot;
-  }) }}</span><span class="xml">
+  }) }}</span><span class="language-xml">
 <span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
 </span></code></pre>
   </div>
   </div>
   <div class="app-tabs__panel app-tabs__panel--hidden" id="js-default--examples-form-validator" data-module="app-copy" role="tabpanel" aria-labelledby="tab_js-default--examples-form-validator">
-<pre><code class="language-js"><span class="hljs-keyword">const</span> validator = <span class="hljs-keyword">new</span> MOJFrontend.FormValidator(<span class="hljs-built_in">document</span>.forms[<span class="hljs-number">0</span>]);
-validator.addValidator(<span class="hljs-string">&#x27;email&#x27;</span>, [{
-  <span class="hljs-attr">method</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">field</span>) </span>{
-    <span class="hljs-keyword">return</span> field.value.trim().length &gt; <span class="hljs-number">0</span>;
+<pre><code class="language-js"><span class="hljs-keyword">const</span> validator = <span class="hljs-keyword">new</span> <span class="hljs-title class_">MOJFrontend</span>.<span class="hljs-title class_">FormValidator</span>(<span class="hljs-variable language_">document</span>.<span class="hljs-property">forms</span>[<span class="hljs-number">0</span>]);
+validator.<span class="hljs-title function_">addValidator</span>(<span class="hljs-string">&#x27;email&#x27;</span>, [{
+  <span class="hljs-attr">method</span>: <span class="hljs-keyword">function</span>(<span class="hljs-params">field</span>) {
+    <span class="hljs-keyword">return</span> field.<span class="hljs-property">value</span>.<span class="hljs-title function_">trim</span>().<span class="hljs-property">length</span> &gt; <span class="hljs-number">0</span>;
   },
   <span class="hljs-attr">message</span>: <span class="hljs-string">&#x27;Enter your email address&#x27;</span>
 }, {
-  <span class="hljs-attr">method</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">field</span>) </span>{
-    <span class="hljs-keyword">return</span> (field.value.indexOf(<span class="hljs-string">&#x27;@&#x27;</span>) &gt; -<span class="hljs-number">1</span>);
+  <span class="hljs-attr">method</span>: <span class="hljs-keyword">function</span>(<span class="hljs-params">field</span>) {
+    <span class="hljs-keyword">return</span> (field.<span class="hljs-property">value</span>.<span class="hljs-title function_">indexOf</span>(<span class="hljs-string">&#x27;@&#x27;</span>) &gt; -<span class="hljs-number">1</span>);
   },
   <span class="hljs-attr">message</span>: <span class="hljs-string">&#x27;You need to enter the ‘at’ symbol in your email address&#x27;</span>
 }]);
-validator.addValidator(<span class="hljs-string">&#x27;password&#x27;</span>, [{
-  <span class="hljs-attr">method</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">field</span>) </span>{
-    <span class="hljs-keyword">return</span> field.value.trim().length &gt; <span class="hljs-number">0</span>;
+validator.<span class="hljs-title function_">addValidator</span>(<span class="hljs-string">&#x27;password&#x27;</span>, [{
+  <span class="hljs-attr">method</span>: <span class="hljs-keyword">function</span>(<span class="hljs-params">field</span>) {
+    <span class="hljs-keyword">return</span> field.<span class="hljs-property">value</span>.<span class="hljs-title function_">trim</span>().<span class="hljs-property">length</span> &gt; <span class="hljs-number">0</span>;
   },
   <span class="hljs-attr">message</span>: <span class="hljs-string">&#x27;Enter your password&#x27;</span>
 }, {
-  <span class="hljs-attr">method</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">field</span>) </span>{
-    <span class="hljs-keyword">return</span> field.value.length &gt; <span class="hljs-number">8</span>;
+  <span class="hljs-attr">method</span>: <span class="hljs-keyword">function</span>(<span class="hljs-params">field</span>) {
+    <span class="hljs-keyword">return</span> field.<span class="hljs-property">value</span>.<span class="hljs-property">length</span> &gt; <span class="hljs-number">8</span>;
   },
   <span class="hljs-attr">message</span>: <span class="hljs-string">&#x27;Your password must contain at least 8 characters&#x27;</span>
 }, {
-  <span class="hljs-attr">method</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">field</span>) </span>{
-    <span class="hljs-keyword">return</span> <span class="hljs-regexp">/\d/</span>.test(field.value);
+  <span class="hljs-attr">method</span>: <span class="hljs-keyword">function</span>(<span class="hljs-params">field</span>) {
+    <span class="hljs-keyword">return</span> <span class="hljs-regexp">/\d/</span>.<span class="hljs-title function_">test</span>(field.<span class="hljs-property">value</span>);
   },
   <span class="hljs-attr">message</span>: <span class="hljs-string">&#x27;Your password must contain at least one number&#x27;</span>
 }]);
-validator.addValidator(<span class="hljs-string">&#x27;location&#x27;</span>, [{
-  <span class="hljs-attr">method</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">field</span>) </span>{
-    <span class="hljs-keyword">return</span> field.value.trim().length &gt; <span class="hljs-number">0</span>;
+validator.<span class="hljs-title function_">addValidator</span>(<span class="hljs-string">&#x27;location&#x27;</span>, [{
+  <span class="hljs-attr">method</span>: <span class="hljs-keyword">function</span>(<span class="hljs-params">field</span>) {
+    <span class="hljs-keyword">return</span> field.<span class="hljs-property">value</span>.<span class="hljs-title function_">trim</span>().<span class="hljs-property">length</span> &gt; <span class="hljs-number">0</span>;
   },
   <span class="hljs-attr">message</span>: <span class="hljs-string">&#x27;Select your location&#x27;</span>
 }]);
-validator.addValidator(<span class="hljs-string">&#x27;dob-day&#x27;</span>, [{
-  <span class="hljs-attr">method</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">field, params</span>) </span>{
-    <span class="hljs-keyword">return</span> (params.day.value.length !== <span class="hljs-number">0</span> &amp;&amp; params.month.value.length !== <span class="hljs-number">0</span> &amp;&amp; params.year.value !== <span class="hljs-number">0</span>);
+validator.<span class="hljs-title function_">addValidator</span>(<span class="hljs-string">&#x27;dob-day&#x27;</span>, [{
+  <span class="hljs-attr">method</span>: <span class="hljs-keyword">function</span>(<span class="hljs-params">field, params</span>) {
+    <span class="hljs-keyword">return</span> (params.<span class="hljs-property">day</span>.<span class="hljs-property">value</span>.<span class="hljs-property">length</span> !== <span class="hljs-number">0</span> &amp;&amp; params.<span class="hljs-property">month</span>.<span class="hljs-property">value</span>.<span class="hljs-property">length</span> !== <span class="hljs-number">0</span> &amp;&amp; params.<span class="hljs-property">year</span>.<span class="hljs-property">value</span> !== <span class="hljs-number">0</span>);
   },
   <span class="hljs-attr">message</span>: <span class="hljs-string">&#x27;Enter your date of birth&#x27;</span>,
   <span class="hljs-attr">params</span>: {
-    <span class="hljs-attr">day</span>: <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&#x27;dob-day&#x27;</span>),
-    <span class="hljs-attr">month</span>: <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&#x27;dob-month&#x27;</span>),
-    <span class="hljs-attr">year</span>: <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&#x27;dob-year&#x27;</span>)
+    <span class="hljs-attr">day</span>: <span class="hljs-variable language_">document</span>.<span class="hljs-title function_">getElementById</span>(<span class="hljs-string">&#x27;dob-day&#x27;</span>),
+    <span class="hljs-attr">month</span>: <span class="hljs-variable language_">document</span>.<span class="hljs-title function_">getElementById</span>(<span class="hljs-string">&#x27;dob-month&#x27;</span>),
+    <span class="hljs-attr">year</span>: <span class="hljs-variable language_">document</span>.<span class="hljs-title function_">getElementById</span>(<span class="hljs-string">&#x27;dob-year&#x27;</span>)
   }
 }, {
-  <span class="hljs-attr">method</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">field, params</span>) </span>{
-    <span class="hljs-keyword">var</span> d = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(<span class="hljs-built_in">parseInt</span>(params.year.value, <span class="hljs-number">10</span>), <span class="hljs-built_in">parseInt</span>(params.month.value, <span class="hljs-number">10</span>) - <span class="hljs-number">1</span>, <span class="hljs-built_in">parseInt</span>(params.day.value, <span class="hljs-number">10</span>) - <span class="hljs-number">1</span>);
-    <span class="hljs-keyword">return</span> d <span class="hljs-keyword">instanceof</span> <span class="hljs-built_in">Date</span> &amp;&amp; !<span class="hljs-built_in">isNaN</span>(d);
+  <span class="hljs-attr">method</span>: <span class="hljs-keyword">function</span>(<span class="hljs-params">field, params</span>) {
+    <span class="hljs-keyword">var</span> d = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Date</span>(<span class="hljs-built_in">parseInt</span>(params.<span class="hljs-property">year</span>.<span class="hljs-property">value</span>, <span class="hljs-number">10</span>), <span class="hljs-built_in">parseInt</span>(params.<span class="hljs-property">month</span>.<span class="hljs-property">value</span>, <span class="hljs-number">10</span>) - <span class="hljs-number">1</span>, <span class="hljs-built_in">parseInt</span>(params.<span class="hljs-property">day</span>.<span class="hljs-property">value</span>, <span class="hljs-number">10</span>) - <span class="hljs-number">1</span>);
+    <span class="hljs-keyword">return</span> d <span class="hljs-keyword">instanceof</span> <span class="hljs-title class_">Date</span> &amp;&amp; !<span class="hljs-built_in">isNaN</span>(d);
   },
   <span class="hljs-attr">message</span>: <span class="hljs-string">&#x27;Enter a valid date of birth&#x27;</span>,
   <span class="hljs-attr">params</span>: {
-    <span class="hljs-attr">day</span>: <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&#x27;dob-day&#x27;</span>),
-    <span class="hljs-attr">month</span>: <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&#x27;dob-month&#x27;</span>),
-    <span class="hljs-attr">year</span>: <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&#x27;dob-year&#x27;</span>)
+    <span class="hljs-attr">day</span>: <span class="hljs-variable language_">document</span>.<span class="hljs-title function_">getElementById</span>(<span class="hljs-string">&#x27;dob-day&#x27;</span>),
+    <span class="hljs-attr">month</span>: <span class="hljs-variable language_">document</span>.<span class="hljs-title function_">getElementById</span>(<span class="hljs-string">&#x27;dob-month&#x27;</span>),
+    <span class="hljs-attr">year</span>: <span class="hljs-variable language_">document</span>.<span class="hljs-title function_">getElementById</span>(<span class="hljs-string">&#x27;dob-year&#x27;</span>)
   }
 }]);
 </code></pre>
   </div>
 </div>
-<h2 id="when-to-use">When to use</h2>
+<h2 id="when-to-use" tabindex="-1">When to use</h2>
 <p>Use the form validator component to validate forms without a server-side round-trip while also conforming to the established standards set out in the <a href="https://design-system.service.gov.uk/">GOV.UK Design System</a>.</p>
-<h2 id="how-to-use">How to use</h2>
+<h2 id="how-to-use" tabindex="-1">How to use</h2>
 <p>In alignment with established GOV.UK Design System standards:</p>
 <ul>
 <li>validation is performed on submit. Forms should never be validated as the user types or blurs the field.</li>
@@ -527,68 +598,118 @@ validator.addValidator(<span class="hljs-string">&#x27;dob-day&#x27;</span>, [{
 
       
 <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
-<h2 class="govuk-heading-m">Need help?</h2>
+<h2 class="govuk-heading-l">Need help?</h2>
 <p class="govuk-body">You can edit the page via <a href="https://github.com/ministryofjustice/moj-frontend/tree/main/docs" class="govuk-link">GitHub</a>
  or if you’ve got a question, idea or suggestion share it on the <a href="https://mojdt.slack.com/archives/CH5RUSB27" class="govuk-link">#moj-pattern-library-support</a> channel on Slack.</p>
 
- <div class="govuk-!-padding-bottom-7"></div>
+<div class="govuk-!-padding-bottom-7"></div>
 
     </div>
   </div>
 
 
-        <footer class="govuk-footer" role="contentinfo">
+        
 
-  <div class="govuk-width-container">
-
-    <div class="govuk-footer__navigation">
-
-      <div class="govuk-footer__section">
-
-        <h2 class="govuk-footer__heading govuk-heading-m">Related resources</h2>
-
-        <ul class="govuk-footer__list govuk-footer__list--columns-1">
-          <li class="govuk-footer__list-item"><a class="govuk-footer__link" href="https://www.gov.uk/guidance/government-design-principles">Government Design Principles</a></li>
-          <li class="govuk-footer__list-item"><a class="govuk-footer__link" href="https://design-system.service.gov.uk/">GOV.UK Design System</a></li>
-          <li class="govuk-footer__list-item"><a class="govuk-footer__link" href="https://www.gov.uk/service-manual">GOV.UK Service Manual</a></li>
-        </ul>
-
+<footer class="govuk-footer " role="contentinfo">
+  <div class="govuk-width-container ">
+    
+      <div class="govuk-footer__navigation">
+        
+          <div class="govuk-footer__section govuk-grid-column-full">
+            <h2 class="govuk-footer__heading govuk-heading-m">Related resources</h2>
+            
+              
+              <ul class="govuk-footer__list ">
+                
+                  
+                    <li class="govuk-footer__list-item">
+                      <a class="govuk-footer__link" href="https://www.gov.uk/guidance/government-design-principles">
+                        Government Design Principles
+                      </a>
+                    </li>
+                  
+                
+                  
+                    <li class="govuk-footer__list-item">
+                      <a class="govuk-footer__link" href="https://design-system.service.gov.uk/">
+                        GOV.UK Design System
+                      </a>
+                    </li>
+                  
+                
+                  
+                    <li class="govuk-footer__list-item">
+                      <a class="govuk-footer__link" href="https://www.gov.uk/service-manual">
+                        GOV.UK Service Manual
+                      </a>
+                    </li>
+                  
+                
+              </ul>
+            
+          </div>
+        
       </div>
-
-    </div>
-
-    <hr class="govuk-section-break">
-
+      <hr class="govuk-footer__section-break">
+    
     <div class="govuk-footer__meta">
-
       <div class="govuk-footer__meta-item govuk-footer__meta-item--grow">
-
-        <h2 class="govuk-visually-hidden">Support links</h2>
-
-        <ul class="govuk-footer__inline-list">
-          <li class="govuk-footer__inline-list-item"><a class="govuk-footer__link" href="/cookies">Cookies</a></li>
-          <li class="govuk-footer__inline-list-item"><a class="govuk-footer__link" href="/privacy-policy">Privacy policy</a></li>
-        </ul>
-
-        <svg aria-hidden="true" focusable="false" class="govuk-footer__licence-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 483.2 195.7" height="17" width="41">
-          <path fill="currentColor" d="M421.5 142.8V.1l-50.7 32.3v161.1h112.4v-50.7zm-122.3-9.6A47.12 47.12 0 0 1 221 97.8c0-26 21.1-47.1 47.1-47.1 16.7 0 31.4 8.7 39.7 21.8l42.7-27.2A97.63 97.63 0 0 0 268.1 0c-36.5 0-68.3 20.1-85.1 49.7A98 98 0 0 0 97.8 0C43.9 0 0 43.9 0 97.8s43.9 97.8 97.8 97.8c36.5 0 68.3-20.1 85.1-49.7a97.76 97.76 0 0 0 149.6 25.4l19.4 22.2h3v-87.8h-80l24.3 27.5zM97.8 145c-26 0-47.1-21.1-47.1-47.1s21.1-47.1 47.1-47.1 47.2 21 47.2 47S123.8 145 97.8 145"></path>
+        
+          <h2 class="govuk-visually-hidden">Support links</h2>
+          
+            <ul class="govuk-footer__inline-list">
+              
+                <li class="govuk-footer__inline-list-item">
+                  <a class="govuk-footer__link" href="/cookies">
+                    Cookies
+                  </a>
+                </li>
+              
+                <li class="govuk-footer__inline-list-item">
+                  <a class="govuk-footer__link" href="/accessibility">
+                    Accessibility
+                  </a>
+                </li>
+              
+            </ul>
+          
+          
+        
+        <svg
+          aria-hidden="true"
+          focusable="false"
+          class="govuk-footer__licence-logo"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 483.2 195.7"
+          height="17"
+          width="41"
+        >
+          <path
+            fill="currentColor"
+            d="M421.5 142.8V.1l-50.7 32.3v161.1h112.4v-50.7zm-122.3-9.6A47.12 47.12 0 0 1 221 97.8c0-26 21.1-47.1 47.1-47.1 16.7 0 31.4 8.7 39.7 21.8l42.7-27.2A97.63 97.63 0 0 0 268.1 0c-36.5 0-68.3 20.1-85.1 49.7A98 98 0 0 0 97.8 0C43.9 0 0 43.9 0 97.8s43.9 97.8 97.8 97.8c36.5 0 68.3-20.1 85.1-49.7a97.76 97.76 0 0 0 149.6 25.4l19.4 22.2h3v-87.8h-80l24.3 27.5zM97.8 145c-26 0-47.1-21.1-47.1-47.1s21.1-47.1 47.1-47.1 47.2 21 47.2 47S123.8 145 97.8 145"
+          />
         </svg>
-
-        <span class="govuk-footer__licence-description">All content is available under the
-          <a class="govuk-footer__link" href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="license">Open Government Licence v3.0</a>, except where otherwise stated
+        <span class="govuk-footer__licence-description">
+          
+            All content is available under the
+            <a
+              class="govuk-footer__link"
+              href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+              rel="license"
+            >Open Government Licence v3.0</a>, except where otherwise stated
+          
         </span>
-
       </div>
-
       <div class="govuk-footer__meta-item">
-        <a class="govuk-footer__link govuk-footer__copyright-logo" href="http://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/copyright-and-re-use/crown-copyright/">&copy; Crown copyright</a>
+        <a
+          class="govuk-footer__link govuk-footer__copyright-logo"
+          href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/"
+        >© Crown copyright</a>
       </div>
-
     </div>
-
   </div>
-
 </footer>
+
 
 
       </div>

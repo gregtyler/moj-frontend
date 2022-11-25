@@ -19,6 +19,7 @@
     <!--[if gt IE 8]><!--><link href="/assets/stylesheets/application.css" rel="stylesheet"><!--<![endif]-->
     <title>Upload files - delete multiple (example) - MOJ Pattern Library</title>
 
+    <script type="text/javascript" src="https://www.googletagmanager.com/gtag/js?id=G-VTGX4YLSVL" async></script>
     <script type="text/javascript" src="/assets/javascript/jquery.js"></script>
     <script type="text/javascript" src="/assets/javascript/all.js"></script>
   </head>
@@ -33,18 +34,15 @@
 
 
 
-<div class="moj-banner moj-banner--success">
+<div class="moj-banner moj-banner--success" role="region" aria-label="Success">
 
   
     <svg class="moj-banner__icon" fill="currentColor" role="presentation" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" height="25" width="25"><path d="M25,6.2L8.7,23.2L0,14.1l4-4.2l4.7,4.9L21,2L25,6.2z"/></svg>
   
 
-  <div class="moj-banner__message">
-    <span class="moj-banner__assistive">Success</span>File named abc.jpg has been deleted</div>
+  <div class="moj-banner__message">File named abc.jpg has been deleted</div>
 
 </div>
-
-
 
 
 <h1 class="govuk-heading-xl">Upload receipts</h1>
@@ -108,13 +106,6 @@
 
 
 
-
-
-
-
-  
-
-  
 <div class="govuk-form-group">
 
   <fieldset class="govuk-fieldset">
@@ -126,10 +117,12 @@
   </legend>
   
 
-  <div class="govuk-radios">
+  <div class="govuk-radios"
+    data-module="govuk-radios">
     
       
           
+        
         
         
         <div class="govuk-radios__item">
@@ -144,6 +137,7 @@
       
     
       
+        
         
         
         <div class="govuk-radios__item">

@@ -19,6 +19,7 @@
     <!--[if gt IE 8]><!--><link href="/assets/stylesheets/application.css" rel="stylesheet"><!--<![endif]-->
     <title>Installing MOJ Frontend with NPM - MOJ Pattern Library</title>
 
+    <script type="text/javascript" src="https://www.googletagmanager.com/gtag/js?id=G-VTGX4YLSVL" async></script>
     <script type="text/javascript" src="/assets/javascript/jquery.js"></script>
     <script type="text/javascript" src="/assets/javascript/all.js"></script>
   </head>
@@ -27,7 +28,56 @@
 
     
       <div>
-        <header class="moj-header moj-header--docs" role="banner">
+        
+
+
+
+
+
+<div class="govuk-cookie-banner " data-nosnippet role="region" aria-label="Cookies on MoJ Pattern Library" data-module="app-cookies">
+    
+    
+
+    <div class="govuk-cookie-banner__message govuk-width-container"
+    >
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        
+        <h2 class="govuk-cookie-banner__heading govuk-heading-m">Cookies on MoJ Pattern Library</h2>
+        
+
+        <div class="govuk-cookie-banner__content">
+  <p class="govuk-body">We’d like to use analytics cookies so we can understand how you use the service and make improvements.</p>
+</div>
+      </div>
+    </div>
+
+      
+      <div class="govuk-button-group">
+        
+          
+            <button type="button" name="accept" class="govuk-button" data-module="govuk-button">
+              Accept analytics cookies
+            </button>
+          
+        
+          
+            <button type="button" name="reject" class="govuk-button" data-module="govuk-button">
+              Reject analytics cookies
+            </button>
+          
+        
+      </div>
+      
+    </div>
+  
+</div>
+
+
+<a href="#main-content" class="govuk-skip-link" data-module="govuk-skip-link">Skip to main content</a>
+
+<header class="moj-header moj-header--docs" role="banner">
 
   <div class="moj-header__container">
 
@@ -39,10 +89,11 @@
         <image src="/assets/images/moj-logotype-crest.png" xlink:href="" class="moj-header__logotype-crest-fallback-image" width="40" height="40"></image>
 
       </svg>
+      <a class="moj-header__link" href="/">
+        <span class="moj-header__link--organisation-name">Ministry of Justice</span>
 
-      <a class="moj-header__link moj-header__link--organisation-name" href="/">Ministry of Justice</a>
-
-      <a class="moj-header__link moj-header__link--service-name" href="/">Pattern Library</a>
+        <span class="moj-header__link--service-name">Pattern Library</span>
+      </a>
     </div>
   </div>
 
@@ -82,7 +133,7 @@
 
 
         
-  <div class="govuk-width-container govuk-grid-row">
+  <div class="govuk-width-container govuk-grid-row app-flex-container">
     <div class="govuk-grid-column-one-third">
       
   
@@ -127,12 +178,12 @@
     </div>
 
     <div class="govuk-grid-column-two-thirds">
-      <main class="govuk-main-wrapper app-prose-scope" role="main">
+      <main id="main-content" class="govuk-main-wrapper app-prose-scope" role="main">
         <h1 class="govuk-heading-xl">
           
           Installing MOJ Frontend with NPM
         </h1>
-        <h2 id="requirements">Requirements</h2>
+        <h2 id="requirements" tabindex="-1">Requirements</h2>
 <p>To use MOJ Frontend with NPM you must:</p>
 <ol>
 <li>Install the long-term support (LTS) version of <a href="https://nodejs.org/en/">Node.js</a>, which includes NPM. The minimum version of Node required is 4.2.0.</li>
@@ -153,12 +204,12 @@
 </ol>
 <pre><code>npm install nunjucks --save
 </code></pre>
-<h2 id="installation">Installation</h2>
+<h2 id="installation" tabindex="-1">Installation</h2>
 <p>To install, run:</p>
 <pre><code>npm install --save @ministryofjustice/frontend
 </code></pre>
 <p>After you have installed MOJ Frontend the <code>@ministryofjustice/frontend</code> package will appear in your <code>node_modules</code> folder.</p>
-<h2 id="importing-styles">Importing styles</h2>
+<h2 id="importing-styles" tabindex="-1">Importing styles</h2>
 <p>You need to import the MOJ Frontend styles into the main Sass file in your project. You should place the below code before your own Sass rules (or Sass imports) if you want to override MOJ Frontend with your own styles.</p>
 <ol>
 <li>To import all components, add the below to your Sass file:</li>
@@ -170,16 +221,16 @@
 </ol>
 <pre><code class="language-CSS"><span class="hljs-keyword">@import</span> <span class="hljs-string">&quot;node_modules/@ministryofjustice/frontend/moj/components/button/button&quot;</span>;
 </code></pre>
-<h3 id="optional%3A-resolving-scss-import-paths">Optional: Resolving SCSS import paths</h3>
+<h3 id="optional%3A-resolving-scss-import-paths" tabindex="-1">Optional: Resolving SCSS import paths</h3>
 <p>If you wish to resolve the above <code>@import</code> paths in your build (in order to avoid prefixing paths with <code>node_modules</code>), you should add <code>node_modules</code> to
 your <a href="https://github.com/sass/node-sass#includepaths">Sass include paths</a> (in Ruby, they should be added to <a href="http://guides.rubyonrails.org/asset_pipeline.html#search-paths">assets paths</a>).</p>
 <p>For example, if your project uses Gulp, you would add the Sass include paths to your Gulp configuration file (for example <code>gulpfile.js</code>) with <a href="https://www.npmjs.com/package/gulp-sass">gulp-sass</a>. Below is an example:</p>
-<pre><code class="language-JS">gulp.task(<span class="hljs-string">&#x27;sass&#x27;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
-  <span class="hljs-keyword">return</span> gulp.src(<span class="hljs-string">&#x27;./sass/**/*.scss&#x27;</span>)
-    .pipe(sass({
+<pre><code class="language-JS">gulp.<span class="hljs-title function_">task</span>(<span class="hljs-string">&#x27;sass&#x27;</span>, <span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) {
+  <span class="hljs-keyword">return</span> gulp.<span class="hljs-title function_">src</span>(<span class="hljs-string">&#x27;./sass/**/*.scss&#x27;</span>)
+    .<span class="hljs-title function_">pipe</span>(<span class="hljs-title function_">sass</span>({
       <span class="hljs-attr">includePaths</span>: <span class="hljs-string">&#x27;node_modules&#x27;</span>
      }))
-    .pipe(gulp.dest(<span class="hljs-string">&#x27;./css&#x27;</span>));
+    .<span class="hljs-title function_">pipe</span>(gulp.<span class="hljs-title function_">dest</span>(<span class="hljs-string">&#x27;./css&#x27;</span>));
 });
 </code></pre>
 <p>If you compile Sass to CSS in your project, your build tasks will already include something similar to the above task - in that case, you will just need
@@ -187,15 +238,15 @@ to include add <code>includePaths</code> to it.</p>
 <p>After resolving the import paths you can import MOJ Frontend by using:</p>
 <pre><code class="language-CSS"><span class="hljs-keyword">@import</span> <span class="hljs-string">&quot;@ministryofjustice/frontend/moj/components/button/button&quot;</span>;
 </code></pre>
-<h2 id="importing-assets">Importing assets</h2>
+<h2 id="importing-assets" tabindex="-1">Importing assets</h2>
 <p>In order to import MOJ Frontend images and fonts to your project, you should configure your application to reference or copy the relevant MOJ Frontend assets.</p>
 <p>Follow either <a href="#recommended-solution">Recommended solution</a> or <a href="#alternative-solution">Alternative solution</a>.</p>
-<h3 id="recommended-solution">Recommended solution</h3>
+<h3 id="recommended-solution" tabindex="-1">Recommended solution</h3>
 <p>Make <code>/node_modules/@ministryofjustice/frontend/moj/assets</code> available to your project by routing requests for your assets folder there.</p>
 <p>For example, if your project uses <a href="https://expressjs.com/">express.js</a>, below is a code sample you could add to your configuration:</p>
-<pre><code class="language-JS">app.use(<span class="hljs-string">&#x27;/assets&#x27;</span>, express.static(path.join(__dirname, <span class="hljs-string">&#x27;/node_modules/@ministryofjustice/frontend/moj/assets&#x27;</span>)))
+<pre><code class="language-JS">app.<span class="hljs-title function_">use</span>(<span class="hljs-string">&#x27;/assets&#x27;</span>, express.<span class="hljs-title function_">static</span>(path.<span class="hljs-title function_">join</span>(__dirname, <span class="hljs-string">&#x27;/node_modules/@ministryofjustice/frontend/moj/assets&#x27;</span>)))
 </code></pre>
-<h3 id="alternative-solution">Alternative solution</h3>
+<h3 id="alternative-solution" tabindex="-1">Alternative solution</h3>
 <p>Manually copy the images and fonts from <code>/node_modules/@ministryofjustice/frontend/moj/assets</code> into a public facing directory in your project. Ideally copying the files to your project should be an automated task or part of your build pipeline to ensure that the MOJ Frontend assets stay up-to-date.</p>
 <p>The default paths used for assets are <code>assets/images</code> and <code>assets/fonts</code>. <strong>If your asset folders follow this structure, you will not need to complete the following steps.</strong></p>
 <p>To use different asset paths, set <code>$govuk-assets-path</code>, <code>$govuk-images-path</code> and <code>$govuk-fonts-path</code> in your project Sass file to point to the relevant directories in your project (this will override the defaults set in <code>/node_modules/@ministryofjustice/frontend/moj/settings/_assets.scss</code>). Make sure you do this in Sass before importing <code>@ministryofjustice/frontend</code> into your project - see <a href="#importing-styles">Importing styles</a>.</p>
@@ -212,11 +263,11 @@ to include add <code>includePaths</code> to it.</p>
 
 <span class="hljs-keyword">@import</span> “<span class="hljs-keyword">@ministryofjustice</span>/frontend/moj/all”;
 </code></pre>
-<h2 id="importing-javascript">Importing JavaScript</h2>
+<h2 id="importing-javascript" tabindex="-1">Importing JavaScript</h2>
 <p><em>See <a href="../../get-started/setting-up-javascript">Setting up JavaScript</a> for information on how to install, configure and use JavaScript</em></p>
-<h2 id="include-css-and-javascript">Include CSS and JavaScript</h2>
+<h2 id="include-css-and-javascript" tabindex="-1">Include CSS and JavaScript</h2>
 <p>Add the CSS and JavaScript code to your HTML template:</p>
-<pre><code class="language-html"><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-meta-keyword">html</span>&gt;</span>
+<pre><code class="language-html"><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-keyword">html</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>Example<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">&quot;stylesheet&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;assets/application.css&quot;</span>&gt;</span>
@@ -235,68 +286,118 @@ to include add <code>includePaths</code> to it.</p>
 
       
 <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
-<h2 class="govuk-heading-m">Need help?</h2>
+<h2 class="govuk-heading-l">Need help?</h2>
 <p class="govuk-body">You can edit the page via <a href="https://github.com/ministryofjustice/moj-frontend/tree/main/docs" class="govuk-link">GitHub</a>
  or if you’ve got a question, idea or suggestion share it on the <a href="https://mojdt.slack.com/archives/CH5RUSB27" class="govuk-link">#moj-pattern-library-support</a> channel on Slack.</p>
 
- <div class="govuk-!-padding-bottom-7"></div>
+<div class="govuk-!-padding-bottom-7"></div>
 
     </div>
   </div>
 
 
-        <footer class="govuk-footer" role="contentinfo">
+        
 
-  <div class="govuk-width-container">
-
-    <div class="govuk-footer__navigation">
-
-      <div class="govuk-footer__section">
-
-        <h2 class="govuk-footer__heading govuk-heading-m">Related resources</h2>
-
-        <ul class="govuk-footer__list govuk-footer__list--columns-1">
-          <li class="govuk-footer__list-item"><a class="govuk-footer__link" href="https://www.gov.uk/guidance/government-design-principles">Government Design Principles</a></li>
-          <li class="govuk-footer__list-item"><a class="govuk-footer__link" href="https://design-system.service.gov.uk/">GOV.UK Design System</a></li>
-          <li class="govuk-footer__list-item"><a class="govuk-footer__link" href="https://www.gov.uk/service-manual">GOV.UK Service Manual</a></li>
-        </ul>
-
+<footer class="govuk-footer " role="contentinfo">
+  <div class="govuk-width-container ">
+    
+      <div class="govuk-footer__navigation">
+        
+          <div class="govuk-footer__section govuk-grid-column-full">
+            <h2 class="govuk-footer__heading govuk-heading-m">Related resources</h2>
+            
+              
+              <ul class="govuk-footer__list ">
+                
+                  
+                    <li class="govuk-footer__list-item">
+                      <a class="govuk-footer__link" href="https://www.gov.uk/guidance/government-design-principles">
+                        Government Design Principles
+                      </a>
+                    </li>
+                  
+                
+                  
+                    <li class="govuk-footer__list-item">
+                      <a class="govuk-footer__link" href="https://design-system.service.gov.uk/">
+                        GOV.UK Design System
+                      </a>
+                    </li>
+                  
+                
+                  
+                    <li class="govuk-footer__list-item">
+                      <a class="govuk-footer__link" href="https://www.gov.uk/service-manual">
+                        GOV.UK Service Manual
+                      </a>
+                    </li>
+                  
+                
+              </ul>
+            
+          </div>
+        
       </div>
-
-    </div>
-
-    <hr class="govuk-section-break">
-
+      <hr class="govuk-footer__section-break">
+    
     <div class="govuk-footer__meta">
-
       <div class="govuk-footer__meta-item govuk-footer__meta-item--grow">
-
-        <h2 class="govuk-visually-hidden">Support links</h2>
-
-        <ul class="govuk-footer__inline-list">
-          <li class="govuk-footer__inline-list-item"><a class="govuk-footer__link" href="/cookies">Cookies</a></li>
-          <li class="govuk-footer__inline-list-item"><a class="govuk-footer__link" href="/privacy-policy">Privacy policy</a></li>
-        </ul>
-
-        <svg aria-hidden="true" focusable="false" class="govuk-footer__licence-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 483.2 195.7" height="17" width="41">
-          <path fill="currentColor" d="M421.5 142.8V.1l-50.7 32.3v161.1h112.4v-50.7zm-122.3-9.6A47.12 47.12 0 0 1 221 97.8c0-26 21.1-47.1 47.1-47.1 16.7 0 31.4 8.7 39.7 21.8l42.7-27.2A97.63 97.63 0 0 0 268.1 0c-36.5 0-68.3 20.1-85.1 49.7A98 98 0 0 0 97.8 0C43.9 0 0 43.9 0 97.8s43.9 97.8 97.8 97.8c36.5 0 68.3-20.1 85.1-49.7a97.76 97.76 0 0 0 149.6 25.4l19.4 22.2h3v-87.8h-80l24.3 27.5zM97.8 145c-26 0-47.1-21.1-47.1-47.1s21.1-47.1 47.1-47.1 47.2 21 47.2 47S123.8 145 97.8 145"></path>
+        
+          <h2 class="govuk-visually-hidden">Support links</h2>
+          
+            <ul class="govuk-footer__inline-list">
+              
+                <li class="govuk-footer__inline-list-item">
+                  <a class="govuk-footer__link" href="/cookies">
+                    Cookies
+                  </a>
+                </li>
+              
+                <li class="govuk-footer__inline-list-item">
+                  <a class="govuk-footer__link" href="/accessibility">
+                    Accessibility
+                  </a>
+                </li>
+              
+            </ul>
+          
+          
+        
+        <svg
+          aria-hidden="true"
+          focusable="false"
+          class="govuk-footer__licence-logo"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 483.2 195.7"
+          height="17"
+          width="41"
+        >
+          <path
+            fill="currentColor"
+            d="M421.5 142.8V.1l-50.7 32.3v161.1h112.4v-50.7zm-122.3-9.6A47.12 47.12 0 0 1 221 97.8c0-26 21.1-47.1 47.1-47.1 16.7 0 31.4 8.7 39.7 21.8l42.7-27.2A97.63 97.63 0 0 0 268.1 0c-36.5 0-68.3 20.1-85.1 49.7A98 98 0 0 0 97.8 0C43.9 0 0 43.9 0 97.8s43.9 97.8 97.8 97.8c36.5 0 68.3-20.1 85.1-49.7a97.76 97.76 0 0 0 149.6 25.4l19.4 22.2h3v-87.8h-80l24.3 27.5zM97.8 145c-26 0-47.1-21.1-47.1-47.1s21.1-47.1 47.1-47.1 47.2 21 47.2 47S123.8 145 97.8 145"
+          />
         </svg>
-
-        <span class="govuk-footer__licence-description">All content is available under the
-          <a class="govuk-footer__link" href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="license">Open Government Licence v3.0</a>, except where otherwise stated
+        <span class="govuk-footer__licence-description">
+          
+            All content is available under the
+            <a
+              class="govuk-footer__link"
+              href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+              rel="license"
+            >Open Government Licence v3.0</a>, except where otherwise stated
+          
         </span>
-
       </div>
-
       <div class="govuk-footer__meta-item">
-        <a class="govuk-footer__link govuk-footer__copyright-logo" href="http://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/copyright-and-re-use/crown-copyright/">&copy; Crown copyright</a>
+        <a
+          class="govuk-footer__link govuk-footer__copyright-logo"
+          href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/"
+        >© Crown copyright</a>
       </div>
-
     </div>
-
   </div>
-
 </footer>
+
 
 
       </div>

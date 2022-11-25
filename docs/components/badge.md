@@ -3,6 +3,8 @@ layout: layouts/component.njk
 title: Badge
 ---
 
+Some change
+
 {% banner "The GOV.UK Design System has a similar component" %}
 The [Tag component](https://design-system.service.gov.uk/components/tag/) in the GOV.UK Design System has a similar function and visual design to this component.
 
